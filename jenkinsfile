@@ -1,0 +1,14 @@
+pipeline{
+    agent {
+        node{
+            label 'jenkins-slave-label'
+        }
+    }
+    stages{
+        stage('checkout code')
+            steps{
+                git branch : 'main', url:'https://github.com/komalnikhade886/java-web-app.git'
+                
+            }
+    }
+}
